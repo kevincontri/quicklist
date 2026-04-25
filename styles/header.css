@@ -1,0 +1,22 @@
+.header {
+  padding: 25px 0 40px;
+}
+
+header span {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--content-secondary);
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 62px;
+}

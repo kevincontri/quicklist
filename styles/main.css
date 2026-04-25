@@ -1,0 +1,180 @@
+main > h1 {
+  font: var(--text-title);
+  margin-bottom: 24px;
+  margin-top: -25px;
+}
+
+.item-input {
+  padding: 11px 18px;
+  flex: 1;
+  height: 44px;
+  background: #ffffff;
+  border: 2px solid #d1d5db;
+  border-radius: 12px;
+  color: var(--content-tertiary);
+  font: var(--text-input);
+  outline: none; /* Remove a borda de foco padrão */
+}
+
+.item-input::placeholder {
+  /* Estilo para o texto de placeholder */
+  color: var(--content-tertiary);
+}
+
+.add-button {
+  padding: 12px 24px;
+  height: 44px;
+  background: var(--color-brand);
+  border-radius: 12px;
+  color: var(--always-white);
+  font: var(--text-label);
+  border: none;
+  cursor: pointer;
+  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+}
+
+.add-button:hover {
+  background: var(--color-brand-hover);
+}
+
+.item-input-container {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.item-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item-list li {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  gap: 12px;
+
+  background: white;
+  border-radius: 12px;
+  font: var(--text-paragraph);
+  color: var(--content-secondary);
+}
+
+.item-list li input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  appearance: none; /* Desativa o estilo padrão do checkbox */
+  cursor: pointer;
+  flex-shrink: 0; /* Impede que o checkbox encolha */
+  position: relative;
+  transition:
+    background 0.15s,
+    border-color 0.15s;
+}
+
+.item-list li input[type="checkbox"]:checked {
+  /* Estilo para o checkbox marcado */
+  background: var(--color-brand);
+  border-color: var(--color-brand);
+}
+
+.item-list li input[type="checkbox"]:checked:after {
+  /* Adiciona um pseudo-elemento para criar o checkmark */
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  width: 5px;
+  height: 9px;
+  border: solid var(--always-white);
+  border-top: none; /* Remove a borda superior */
+  border-left: none; /* Remove a borda esquerda */
+  transform: rotate(45deg);
+}
+
+.item-list li:has(input[type="checkbox"]:checked) {
+  /* Seleciona o li pai quando o checkbox estiver marcado */
+  color: var(--content-tertiary);
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.item-list li span {
+  flex: 1; /* Faz o texto ocupar o espaço restante */
+}
+
+.delete-button {
+  all: unset;
+  cursor: pointer;
+  opacity: 0.4;
+  padding-right: 12px;
+}
+
+.delete-button:hover {
+  opacity: 1;
+}
+
+.toast {
+  justify-content: center;
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  width: 50%;
+  transform: translateX(-50%);
+  background: var(--color-danger);
+  color: white;
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font: var(--text-paragraph);
+}
+
+.toast > span {
+  flex: 1;
+}
+
+.toast .close-button {
+  all: unset;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.toast .close-button:hover {
+  opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+  }
+
+  .item-input-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .toast {
+    width: 90%;
+  }
+
+  .add-button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 690px) {
+  .container {
+    width: 90%;
+  }
+
+  .toast {
+    width: 90%;
+  }
+}

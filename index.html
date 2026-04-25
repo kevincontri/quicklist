@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickList</title>
+    <link rel="stylesheet" href="styles/index.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="container">
+    <header class="header">
+      <div class="logo-container">
+        <img src="/assets/logo.svg" alt="Logo do QuickList" class="logo" />
+        <span>quicklist</span>
+      </div>
+      <a href="#" class="back-link"> <- Voltar </a>
+    </header>
+    <main>
+      <h1>Compras da semana</h1>
+      <form>
+        <div class="item-input-container">
+          <input
+            type="text"
+            placeholder="Adicione um novo item"
+            class="item-input"
+            id="itemInput"
+            required
+          />
+          <button type="submit" class="add-button" id="addButton">
+            Adicionar item
+          </button>
+        </div>
+      </form>
+
+      <ul class="item-list" id="itemList">
+        <li>
+          <input type="checkbox" id="item1" name="item1" />
+          <span>Pão de forma</span>
+          <button class="delete-button" data-item-id="item1">
+            <img src="/assets/trash.svg" alt="Lixeira" />
+          </button>
+        </li>
+        <li>
+          <input type="checkbox" id="item2" name="item2" />
+          <span>Café preto</span>
+          <button class="delete-button" data-item-id="item2">
+            <img src="/assets/trash.svg" alt="Lixeira" />
+          </button>
+        </li>
+        <li>
+          <input type="checkbox" id="item3" name="item3" />
+          <span>Suco de Laranja</span>
+          <button class="delete-button" data-item-id="item3">
+            <img src="/assets/trash.svg" alt="Lixeira" />
+          </button>
+        </li>
+        <li>
+          <input type="checkbox" id="item4" name="item4" />
+          <span>Bolacha</span>
+          <button class="delete-button" data-item-id="item4">
+            <img src="/assets/trash.svg" alt="Lixeira" />
+          </button>
+        </li>
+      </ul>
+    </main>
+    <footer>
+      <div class="toast" id="toast" style="display: none">
+        <img src="assets/warning.svg" alt="warning" />
+        <span>O item foi excluido da lista</span>
+        <button class="close-button" id="closeButton">
+          <img src="assets/delete-small.svg" alt="Fechar" />
+        </button>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
