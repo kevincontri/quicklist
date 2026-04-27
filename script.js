@@ -1,6 +1,7 @@
 const form = document.querySelector("form")
 const item = document.getElementById("itemInput")
 const list = document.getElementById("itemList")
+const itemToDelete = document.getEl
 
 // Adiciona um item à lista quando o formulário é enviado
 form.onsubmit = (e) => {
@@ -42,3 +43,31 @@ function addItem(itemText) {
 
   return li;
 } 
+
+// Remove um item da lista quando o botão de exclusão é clicado
+list.onclick = (e) => {
+const button = e.target.closest('.delete-button');
+
+if (!button) return;
+
+const item = button.closest('li')
+item.remove();
+
+showToast(); // Exibe o toast de confirmação da exclusão
+
+function showToast() {
+  const toast = document.getElementById('toast');
+  toast.classList.add('show');
+  
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 3000);
+}
+
+// Fecha o toast quando o botão de fechar é clicado
+const closeButton = document.getElementById('closeButton');
+closeButton.onclick = () => {
+  toast.classList.remove('show');
+}  
+}
+
