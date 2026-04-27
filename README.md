@@ -1,6 +1,10 @@
 # QuickList
 
-Aplicação web para gerenciamento de listas de compras, construída com HTML, CSS e JavaScript puro.
+Aplicação web para gerenciamento de listas de compras, construída com HTML, CSS e JavaScript puro. <br>
+[Visite o site aqui!](https://kevincontri.github.io/quicklist/)
+<br><br>
+<img width="2126" height="1419" alt="image" src="https://github.com/user-attachments/assets/38e9d1e5-759c-4b20-90b9-629e67e8f885" />
+
 
 ## Funcionalidades
 
