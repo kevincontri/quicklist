@@ -33,7 +33,7 @@ function addItem(itemText) {
   button.dataset.itemId = id;
 
   const icon = document.createElement('img')
-  icon.src = '/assets/trash.svg'
+  icon.src = 'assets/trash.svg'
   icon.alt = 'Lixeira'
 
   button.appendChild(icon)
